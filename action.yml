@@ -1,0 +1,12 @@
+name: 'helllicht/security-check'
+description: 'helllicht internal security-check-action'
+
+runs:
+    using: "composite"
+    steps:
+        -   run: echo "Start helllicht/security-check"
+            shell: bash
+        -   run: |
+                chmod +x ${{ github.action_path }}/check.sh
+                bash ${{ github.action_path }}/check.sh
+            shell: bash
