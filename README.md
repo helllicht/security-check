@@ -33,7 +33,7 @@ jobs:
         steps:
             - name: Checkout Repository
               uses: actions/checkout@v2
-            - name: Install PHP dependencies
+            - name: Security Check
               uses: helllicht/security-check@master
             - ...
 ```
